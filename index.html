@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* Add custom styles for navigation */
+        nav {
+            background-color: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        nav a.order {
+            /* Style for the "Order" link */
+            font-weight: bold;
+            color: #ffcc00; /* Yellow color for emphasis */
+            }
+
+        nav a.cart {
+            /* Style for the "Cart" link */
+            font-weight: bold;
+            color: #66ff66; /* Green color for emphasis */
+        }
+
+        /* Add spacing to separate the navigation bar from the content */
+        body {
+            margin-top: 50px;
+        }
+
+        /* Style for the list of orders */
+        #orderList {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
+    <title>Simple E-commerce Website</title>
+</head>
+
+<body>
+    <nav>
+        <a href="#" class="order" onclick="showOrders()">Order</a>
+        <a href="#" class="cart">Cart</a>
+    </nav>
+    
+
+    <header>
+        <h1>My E-commerce Store</h1>
+    </header>
+    <main>
+    
+        <div class="product">
+            <img src="product.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p class="price">$300.00</p>
+                <p class="description">NEIDHAL DRESS MATERIALS ONLINE SHOPPING AJRAKH DRESS MATERIAL VISMAY CHURIDAR MATERIALS.</p>
+                <div class="ratings">
+                    <p class="rating">Rating: 4.5</p>
+                    <p class="reviews">Reviews: 10</p>
+                </div>
+            <button onclick="addToCart('Product', 50.00)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="product2.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p class="price">$500.00</p>
+                <p class="description">SHREE GANESH COTTON DRESS MATERIALS WHOLESALE UNSTITCHED LADIES SUIT</p>
+                <div class="ratings">
+                    <p class="rating">Rating: 4.5</p>
+                    <p class="reviews">Reviews: 10</p>
+                </div>
+            <button onclick="addToCart('Product 2', 35.00)">Add to Cart</button>
+        </div>
+        
+        
+        
+
+        <div class="product">
+            <img src="product 3.jpg" alt="Product 1">
+            <h2>Product 3</h2>
+            <p class="price">$400.00</p>
+                <p class="description">PURE COTTON SAREES WHOLESALE COTTON DRESS MATERIAL CATALOGUE WITH PRICE</p>
+                <div class="ratings">
+                    <p class="rating">Rating: 3.5</p>
+                    <p class="reviews">Reviews: 50</p>
+                </div>
+            <button onclick="addToCart('Product 1', 50.00)">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="product4.jpg" alt="Product 2">
+            <h2>Product 4</h2>
+            <p class="price">$350.00</p>
+                <p class="description">BALAJI COTTON DRESS MATERIAL WHOLESALE CHURIDAR MATERIALS.</p>
+                <div class="ratings">
+                    <p class="rating">Rating: 4.4</p>
+                    <p class="reviews">Reviews: 20</p>
+                </div>
+            <button onclick="addToCart('Product 2', 35.00)">Add to Cart</button>
+        </div>
+        
+</main>
+    <h2>Shopping Cart</h2>
+        <ul id="cartItems"></ul>
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <!-- Replace your existing form with Bootstrap form components -->
+
+        <form id="orderForm" class="mt-4">
+            <!-- Form fields go here -->
+            <button type="button" class="btn btn-primary" onclick="confirmOrder()">Confirm Order</button>
+        </form>
+    
+        <!-- Order List -->
+        <div id="orderList">
+            <h2>Orders</h2>
+            <ul>
+                <!-- Display orders dynamically here -->
+                <li>Order 1</li>
+                <li>Order 2</li>
+                <!-- Add more orders as needed -->
+            </ul>
+        </div>
+
+
+<form id="orderForm" class="mt-4">
+<div>
+    <button onclick="addToCart('Product 2', 35.00)">order here</button>    
+    <form id="orderForm" class="mt-4">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+        <label for="email">phone number:</label>
+        <input type="number" class="form-control" id="number" name="number" required>
+    </div>
+    <div class="form-group">
+        <label for="address">Address:</label>
+        <textarea class="form-control" id="address" name="address" required></textarea>
+    </div>
+    <button type="button" class="btn btn-primary" onclick="confirmOrder()">Confirm Order</button>
+</form>
+</div>
+
+    </aside>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
